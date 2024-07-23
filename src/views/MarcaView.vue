@@ -42,8 +42,8 @@ async function excluir(id) {
   <div class="form">
     <input type="text" v-model="marca.nome" placeholder="Nome" />
     <input type="text" v-model="marca.nacionalidade" placeholder="Nacionalidade" />
-    <button @click="salvar">Salvar</button>
-    <button @click="limpar">Limpar</button>
+    <button class="button" @click="salvar">Salvar</button>
+    <button class="button" @click="limpar">Limpar</button>
   </div>
   <hr />
   <ul>
@@ -51,9 +51,19 @@ async function excluir(id) {
       <span @click="editar(marca)">
         ({{ marca.id }}) - {{ marca.nome }} - {{ marca.nacionalidade }}
       </span>
-      <button @click="excluir(marca.id)">X</button>
+      <button class="button close" @click="excluir(marca.id)">X</button>
     </li>
   </ul>
 </template>
 
-<style></style>
+<style>
+.button.close:hover {
+  background-color: #bcbebe; /* Green */
+  color: white;
+  border: solid red 2px;
+}
+
+.button.close{
+  background-color: rgb(230, 54, 54);
+}
+</style>

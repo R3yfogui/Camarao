@@ -20,13 +20,11 @@ export default {
           <div class="container">
          <div class="wrapper">
            <div class="banner-image">
-            <router-link to="/Acessorios">Acessorios</router-link>
+            <router-link to="/Acessorios" class="button" >Acessorios</router-link>
            </div>
           </div>
           
-          <div class="button-wrapper"> 
-          <button class="btn outline">DETAILS</button>
-          </div>
+         
             </div></Tilt>
         </div>
         
@@ -34,12 +32,11 @@ export default {
           <div class="container">
          <div class="wrapper">
           
-           <div class="banner-image"><router-link to="/marcas">Marcas</router-link> </div>
+           <div class="banner-image">
+            <router-link to="/marcas" class="button">Marcas</router-link> </div>
           
           </div>
-          <div class="button-wrapper"> 
-          <button class="btn outline">DETAILS</button>
-          </div>
+          
             </div></Tilt>
         </div>
               
@@ -50,13 +47,11 @@ export default {
           <div class="container">
          <div class="wrapper">
            <div class="banner-image">
-            <router-link to="/Categorias">Categorias</router-link>
+            <router-link to="/Categorias" class="button">Categorias</router-link>
            </div>
           </div>
           
-          <div class="button-wrapper"> 
-          <button class="btn outline">DETAILS</button>
-          </div>
+         
             </div></Tilt>
         </div>
         
@@ -64,12 +59,11 @@ export default {
           <div class="container">
          <div class="wrapper">
           
-           <div class="banner-image"><router-link to="/Cores">Cores</router-link> </div>
+           <div class="banner-image">
+            <router-link to="/Cores" class="button">Cores</router-link> </div>
           
           </div>
-          <div class="button-wrapper"> 
-          <button class="btn outline">DETAILS</button>
-          </div>
+          
             </div> </Tilt>
         </div>
               

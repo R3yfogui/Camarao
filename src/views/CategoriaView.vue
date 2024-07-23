@@ -39,51 +39,43 @@ async function excluir(id) {
 <template>
   <h1>Categoria</h1>
   <hr />
+  <div class="form">
+    <input type="text" v-model="categoria.nome" placeholder="Nome" />
+    <button class="button" @click="salvar">Salvar</button>
+    <button class="button" @click="limpar">Limpar</button>
+  </div>
   <hr />
   <ul>
     <li v-for="categoria in categorias" :key="categoria.id">
       <span @click="editar(categoria)">
-        ({{ categoria.id }}) - {{ categoria.descricao }} -
+        ({{ categoria.id }}) - {{ categoria.descricao }} 
       </span>
-      <button @click="excluir(categoria.id)">X</button>
+      <button class="button close" @click="excluir(categoria.id)">X</button>
     </li>
   </ul>
 
-  <div class="container">
-  <form action="action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Descrição</label>
-      </div>
-      <div class="col-75">
-        <input v-model="categoria.descricao" type="text" id="fname" name="firstname" placeholder="Descrição">
-      </div>
-    </div>
-    
-    <div class="row"">
-      <input @click="salvar" type="submit" value="Salvar">
-      <input @click="limpar" type="submit" value="Limpar">
-    </div>
-  </form>
-</div>
+
 </template>
 
 <style>
+
+.button.close:hover {
+  background-color: #bcbebe; /* Green */
+  color: white;
+  border: solid red 2px;
+}
+
+.button.close{
+  background-color: rgb(230, 54, 54);
+}
+
 
 .row{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-input[type=text], select, textarea{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-  margin: 10px;
-}
+
 
 /* Style the label to display next to the inputs */
 label {
