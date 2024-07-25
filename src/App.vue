@@ -3,40 +3,40 @@ import { onMounted } from 'vue';
 import { PassageUser } from '@passageidentity/passage-elements/passage-user';
 import { useAuthStore } from '@/stores/auth';
 
-    
+
 
 const authStore = useAuthStore();
 
 </script>
 
 <template>
-  
-    
-    <div v-if="authStore.loggedIn">
-      <div class="topnav">
-  <a class="active" href="#home"><router-link :to="{ name: 'home' }">Home</router-link> </a>
-  <a><router-link  to="/logout">Logout</router-link> </a> 
-  <a href="">{{ authStore.user.email }}</a>
-</div>
-     
-      
+
+  <div v-if="authStore.loggedIn">
+    <div class="topnav">
+      <a class="active" href="#home"><router-link :to="{ name: 'home' }">Home</router-link> </a>
+      <a><router-link to="/logout">Logout</router-link> </a>
+      <a href=""> <a href="">{{ authStore.user.email }}</a></a>
     </div>
-    
-    <router-link v-else to="/login">Login</router-link>
-  
+
+
+  </div>
+
+  <router-link v-else to="/login">Login</router-link>
+
   <main>
     <RouterView />
   </main>
 
-  
-  
-  
+
+
+
 </template>
 
 <style>
 .topnav {
   background-color: #333;
   overflow: hidden;
+  margin-top: 60px;
 }
 
 /* Style the links inside the navigation bar */
@@ -47,6 +47,7 @@ const authStore = useAuthStore();
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  z-index: 10000;
 }
 
 /* Change the color of links on hover */
@@ -60,4 +61,5 @@ const authStore = useAuthStore();
   background-color: #04AA6D;
   color: white;
 }
+
 </style>

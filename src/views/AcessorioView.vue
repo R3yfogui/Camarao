@@ -37,16 +37,16 @@ async function excluir(id) {
 </script>
 
 <template>
+  <div class="box box1">
   <h1>Acessorio</h1>
   <hr />
   <div class="form">
-    <label for="fname">Acessorio</label>
-    <input type="text" v-model="acessorio.descricao" placeholder="Descrição" />
+    <input type="text"  v-model="acessorio.descricao" placeholder="Descrição" />
     <button class="button" @click="salvar">Salvar</button>
     <button class="button" @click="limpar">Limpar</button>
   </div>
   <hr />
-  <label for="fname">Acessorio</label>
+
   <ul>
     <li v-for="acessorio in acessorios" :key="acessorio.id">
       <span @click="editar(acessorio)">
@@ -59,6 +59,7 @@ async function excluir(id) {
   <form action="/action_page.php">
 
 </form>
+</div>
 </template>
 
 <style>
@@ -175,4 +176,7 @@ li:nth-child(3n - 1)::marker {
 hr{
   border: none;
 }
+
+
+
 </style>
