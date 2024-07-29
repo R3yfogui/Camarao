@@ -296,4 +296,12 @@ p {
     flex-direction: column;
     transform: translateY(50%);
   }
-}</style>
+  .home {
+    display: block;
+  }
+  .buttons {
+    height: 140vh;
+  }
+}
+
+</style>

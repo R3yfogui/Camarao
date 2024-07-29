@@ -37,6 +37,7 @@ async function excluir(id) {
 </script>
 
 <template>
+  <div class="quadrado">
   <div class="box box1">
   <h1>Acessorio</h1>
   <hr />
@@ -59,6 +60,7 @@ async function excluir(id) {
   <form action="/action_page.php">
 
 </form>
+</div>
 </div>
 </template>
 
@@ -178,5 +180,12 @@ hr{
 }
 
 
-
+@media screen and (max-width: 600px) {
+  .quadrado {
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    
+  }
+}
 </style>
